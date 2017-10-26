@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, request, g, flash, session
-from app import webapp, get_db, teardown_db
+from app import webapp, get_db, teardown_db, get_s3bucket
 from pymysql import escape_string
 from passlib.hash import sha256_crypt
 from wand.image import Image

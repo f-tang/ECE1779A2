@@ -2,6 +2,9 @@ from flask import Flask, render_template, redirect, url_for, flash, session, g
 from functools import wraps
 import pymysql.cursors
 from app.config import db_config
+import boto3
+from botocore.client import Config
+
 
 webapp = Flask(__name__)
 webapp.secret_key='\x80\xa9s*\x12\xc7x\xa9d\x1f(\x03\xbeHJ:\x9f\xf0!\xb1a\xaa\x0f\xee'
@@ -20,7 +23,7 @@ def get_db():
         db = g._databse = connect_to_database()
     return db
 
-# exception teardown
+# database exception teardown
 @webapp.teardown_appcontext
 def teardown_db(exception):
     db = getattr(g, '_database', None)
@@ -39,6 +42,16 @@ def login_required(f):
             return redirect(url_for('login_form'))
 
     return wrap
+
+# access aws s3 bucket
+BUCKET_NAME = 'ece1779-ft'
+def get_s3bucket():
+    aws_session = boto3.Session(profile_name="s3")
+    s3 = aws_session.resource('s3')
+
+    return s3.Bucket(BUCKET_NAME)
+
+
 
 from app import main
 from app import gallery

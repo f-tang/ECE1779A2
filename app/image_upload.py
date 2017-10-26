@@ -1,13 +1,17 @@
 from flask import render_template, redirect, url_for, request, g, flash, session
-from app import webapp, login_required, get_db,teardown_db
+from app import webapp, login_required, get_db,teardown_db, get_s3bucket
 from pymysql import escape_string
 from wand.image import Image
+import boto3
 
 import gc
-import os
+import os, shutil
 
 # get the absolute path of the file
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+# path of s3 images folder
+IMAGES_PATH = "images/"
 
 # implement image transformation
 def image_transfer(imagefile, method):
@@ -31,11 +35,16 @@ def image_transfer(imagefile, method):
 @login_required
 def image_upload():
     error = ''
+    APP_RELATED = 'static/tmp/' + session['username']
+    tmp_target = os.path.join(APP_ROOT, APP_RELATED)
+    target = IMAGES_PATH + session['username']
+
     try:
         if request.method == "POST":
             # access to database
             cnx = get_db()
             cursor = cnx.cursor()
+            s3 = get_s3bucket()
 
             # fetch the user ID of user
             cursor.execute("SELECT userID FROM users WHERE username = (%s)",
@@ -43,15 +52,12 @@ def image_upload():
             uID = cursor.fetchone()[0]
 
             # file path of images
-            if not os.path.isdir(os.path.join(APP_ROOT, 'static/images/')):
-                os.mkdir(os.path.join(APP_ROOT, 'static/images/'))
+            if not os.path.isdir(os.path.join(APP_ROOT, 'static/tmp/')):
+                os.mkdir(os.path.join(APP_ROOT, 'static/tmp/'))
 
-            APP_RELATED = 'static/images/' + session['username']
-            target = os.path.join(APP_ROOT, APP_RELATED)
-
-            # create a folder for the user if it does not exist
-            if not os.path.isdir(target):
-                os.mkdir(target)
+            # create a tmp folder for the user if it does not exist
+            if not os.path.isdir(tmp_target):
+                os.mkdir(tmp_target)
 
             # check if file exists in the request
             if 'file' not in request.files:
@@ -79,7 +85,12 @@ def image_upload():
 
                 # save the image file
                 destination = "/".join([target, filename])
-                file.save(destination)
+                tmp_dest = "/".join([tmp_target, filename])
+
+                file.save(tmp_dest)
+                file.seek(0)
+                s3.put_object(Key=destination, Body=file, ACL='public-read')
+
 
                 # insert the image info into the database
                 cursor.execute("INSERT INTO images (pID, pName, users_userID) VALUES (%s, %s, %s)",
@@ -99,18 +110,20 @@ def image_upload():
                     tfilename = escape_string("tr" + str(i) + "_" + filename)
 
                     # apply transformation
-                    img = Image(filename=destination)
+                    img = Image(filename=tmp_dest)
                     with img.clone() as tfile:
                         image_transfer(tfile, i)
                         # save the image file
                         tdestination = "/".join([target, tfilename])
-                        tfile.save(filename=tdestination)
+                        # tfile.save(filename=tdestination)
+                        # s3.put_object(Key=tdestination, Body=tfile, ACL='public-read')
                         # insert the image info into the database
                         cursor.execute("INSERT INTO trimages (tpID, tpName, images_pID) VALUES (%s, %s, %s)",
                                    (int(tpID), tfilename, int(pID)))
 
             # database commit, cleanup and garbage collect
-            cnx.commit()
+            shutil.rmtree(tmp_target)
+            # cnx.commit()
             cursor.close()
             cnx.close()
             gc.collect()
@@ -121,5 +134,7 @@ def image_upload():
         return render_template("image-upload.html", title="upload images")
 
     except Exception as e:
+        if os.path.isdir(tmp_target):
+            shutil.rmtree(tmp_target)
         teardown_db(e)
         return str(e)
