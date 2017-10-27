@@ -51,6 +51,11 @@ def get_s3bucket():
 
     return s3.Bucket(BUCKET_NAME)
 
+def get_s3client():
+    aws_session = boto3.Session(profile_name="s3")
+    s3 = aws_session.client('s3')
+
+    return s3
 
 
 from app import main

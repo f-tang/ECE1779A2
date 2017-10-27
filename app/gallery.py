@@ -1,9 +1,16 @@
 from flask import render_template, redirect, url_for, request, g, session, flash
-from app import webapp, login_required, get_db, teardown_db
+from app import webapp, login_required, get_db, teardown_db, get_s3client
 from pymysql import escape_string
+import boto3
 
 import gc
-import os
+import os, shutil
+
+
+# get the absolute path of the file
+APP_ROOT = os.path.dirname(os.path.abspath(__file__)) + "/static"
+
+BUCKET_NAME = 'ece1779-ft'
 
 
 # page for the thumbnail gallery
@@ -16,8 +23,7 @@ def gallery():
         cnx = get_db()
         cursor = cnx.cursor()
 
-        # file path of images
-        APP_RELATED = 'images/' + session['username']
+        url = "https://s3.amazonaws.com/ece1779-ft/images/" + session['username']
 
         # fetch names of the images owned by user
         cursor.execute("SELECT userID FROM users WHERE username = (%s)",
@@ -30,11 +36,13 @@ def gallery():
         # store image paths and pass to frontend
         images = []
         for imagename in imagenames:
-            images.append(APP_RELATED + '/' + imagename[0])
+            image = url + '/' + imagename[0]
+            images.append(image)
 
         #cleanup
         cursor.close()
         cnx.close()
+
         return render_template("thumbnail-gallery.html", title="Gallery", images=images)
 
     except Exception as e:
@@ -49,13 +57,13 @@ def full_image(username, image):
     try:
         # verify the identity of the user
         pathname = str(image).split('/')
-        if not username == pathname[1] or not username == session['username']:
+        if not username == pathname[-2] or not username == session['username']:
             flash("access denied")
             return redirect(url_for('gallery'))
 
         # initialize the image list
         images = []
-        images.append(image)
+        images.append(str(image))
 
         # access to database
         cnx = get_db()
@@ -66,10 +74,11 @@ def full_image(username, image):
                        (escape_string(pathname[-1])))
         imagenames = cursor.fetchall()
 
+        url = "https://s3.amazonaws.com/ece1779-ft/images/" + session['username']
         # store image paths and pass to frontend
-        APP_RELATED = 'images/' + session['username']
         for imagename in imagenames:
-            images.append(APP_RELATED + '/' + imagename[0])
+            image = url + '/' + imagename[0]
+            images.append(image)
 
         # cleanup
         cursor.close()
@@ -77,5 +86,8 @@ def full_image(username, image):
         return render_template("full-image.html", username=username, images=images)
 
     except Exception as e:
+        APP_RELATED = 'tmp/' + session['username']
+        if os.path.isdir(os.path.join(APP_ROOT, APP_RELATED)):
+            shutil.rmtree(os.path.join(APP_ROOT, APP_RELATED))
         teardown_db(e)
         return str(e)

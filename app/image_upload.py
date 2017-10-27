@@ -114,16 +114,17 @@ def image_upload():
                     with img.clone() as tfile:
                         image_transfer(tfile, i)
                         # save the image file
+                        tmp_tdest = "/".join([tmp_target, tfilename])
+                        tfile.save(filename=tmp_tdest)
                         tdestination = "/".join([target, tfilename])
-                        # tfile.save(filename=tdestination)
-                        # s3.put_object(Key=tdestination, Body=tfile, ACL='public-read')
+                        s3.put_object(Key=tdestination, Body=open(tmp_tdest, 'rb'), ACL='public-read')
                         # insert the image info into the database
                         cursor.execute("INSERT INTO trimages (tpID, tpName, images_pID) VALUES (%s, %s, %s)",
                                    (int(tpID), tfilename, int(pID)))
 
             # database commit, cleanup and garbage collect
             shutil.rmtree(tmp_target)
-            # cnx.commit()
+            cnx.commit()
             cursor.close()
             cnx.close()
             gc.collect()

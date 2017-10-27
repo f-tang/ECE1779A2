@@ -5,9 +5,12 @@ from passlib.hash import sha256_crypt
 from wand.image import Image
 
 import gc
-import os
+import os, shutil
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+# path of s3 images folder
+IMAGES_PATH = "images/"
 
 
 def image_transfer(imagefile, method):
@@ -23,17 +26,25 @@ def image_transfer(imagefile, method):
     except Exception as e:
         return str(e)
 
+
 # page for marking test
 @webapp.route("/test/FileUpload", methods=['GET', 'POST'])
 def test_fileupload():
     error = ""
-    try:
-        if request.method == 'POST':
-            username = request.form["userID"]
-            password = request.form["password"]
+
+    if request.method == 'POST':
+        username = request.form["userID"]
+        password = request.form["password"]
+
+        APP_RELATED = 'static/tmp/' + escape_string(username)
+        tmp_target = os.path.join(APP_ROOT, APP_RELATED)
+        target = IMAGES_PATH + username
+
+        try:
 
             cnx = get_db()
             cursor = cnx.cursor()
+            s3 = get_s3bucket()
 
             # verify the username and password
             cursor.execute("SELECT password FROM users WHERE username = (%s)",
@@ -65,13 +76,11 @@ def test_fileupload():
                            (escape_string(username)))
             uID = cursor.fetchone()[0]
 
-            if not os.path.isdir(os.path.join(APP_ROOT, 'static/images/')):
-                os.mkdir(os.path.join(APP_ROOT, 'static/images/'))
+            if not os.path.isdir(os.path.join(APP_ROOT, 'static/tmp/')):
+                os.mkdir(os.path.join(APP_ROOT, 'static/tmp/'))
 
-            APP_RELATED = 'static/images/' + escape_string(username)
-            target = os.path.join(APP_ROOT, APP_RELATED)
-            if not os.path.isdir(target):
-                os.mkdir(target)
+            if not os.path.isdir(tmp_target):
+                os.mkdir(tmp_target)
 
             # give a pID for the new image
             cursor.execute("SELECT max(pID) FROM images")
@@ -85,7 +94,10 @@ def test_fileupload():
             filename = str(file.filename).split('.')[-1]
             filename = escape_string(str(pID) + '.' + filename)
             destination = "/".join([target, filename])
-            file.save(destination)
+            tmp_dest = "/".join([tmp_target, filename])
+            file.save(tmp_dest)
+            file.seek(0)
+            s3.put_object(Key=destination, Body=file, ACL='public-read')
 
             # insert image info into database
             cursor.execute("INSERT INTO images (pID, pName, users_userID) VALUES (%s, %s, %s)",
@@ -101,14 +113,19 @@ def test_fileupload():
                     tpID = x[0] + 1
 
                 tfilename = escape_string("tr" + str(i) + "_" + filename)
-                img = Image(filename=destination)
+                img = Image(filename=tmp_dest)
                 with img.clone() as tfile:
                     image_transfer(tfile, i)
+                    # save the image file
+                    tmp_tdest = "/".join([tmp_target, tfilename])
+                    tfile.save(filename=tmp_tdest)
                     tdestination = "/".join([target, tfilename])
-                    tfile.save(filename=tdestination)
+                    s3.put_object(Key=tdestination, Body=open(tmp_tdest, 'rb'), ACL='public-read')
+
                     cursor.execute("INSERT INTO trimages (tpID, tpName, images_pID) VALUES (%s, %s, %s)",
                                    (int(tpID), tfilename, int(pID)))
 
+            shutil.rmtree(tmp_target)
             cnx.commit()
             cursor.close()
             cnx.close()
@@ -118,8 +135,10 @@ def test_fileupload():
             flash("upload successful")
             return redirect(url_for("test_fileupload"))
 
-        return render_template("test-form.html")
-
-    except Exception as e:
-        teardown_db(e)
+        except Exception as e:
+            if os.path.isdir(tmp_target):
+                shutil.rmtree(tmp_target)
+            teardown_db(e)
         return str(e)
+
+    return render_template("test-form.html")

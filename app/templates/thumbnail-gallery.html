@@ -30,7 +30,7 @@ padding-top: 56px;
         {% for image in images %}
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <a href="{{url_for('full_image', username=session.username, image=image)}}" class="d-block mb-4 h-10">
-                    <img class="img-fluid img-thumbnail" src="{{url_for('static', filename=image)}}" alt="">
+                    <img class="img-fluid img-thumbnail" src="{{ image }}" alt="">
                 </a>
             </div>
         {% endfor %}
@@ -40,7 +40,7 @@ padding-top: 56px;
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; ECE1779-A1 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; ECE1779-A2 2017</p>
     </div>
     <!-- /.container -->
 </footer>
