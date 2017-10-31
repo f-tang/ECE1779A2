@@ -1,0 +1,100 @@
+[2017-10-31 16:16:35 +0000] [7755] [INFO] Starting gunicorn 19.7.1
+[2017-10-31 16:16:35 +0000] [7755] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:16:35 +0000] [7755] [ERROR] Retrying in 1 second.
+[2017-10-31 16:16:36 +0000] [7755] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:16:36 +0000] [7755] [ERROR] Retrying in 1 second.
+[2017-10-31 16:16:37 +0000] [7755] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:16:37 +0000] [7755] [ERROR] Retrying in 1 second.
+[2017-10-31 16:16:38 +0000] [7755] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:16:38 +0000] [7755] [ERROR] Retrying in 1 second.
+[2017-10-31 16:16:39 +0000] [7755] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:16:39 +0000] [7755] [ERROR] Retrying in 1 second.
+[2017-10-31 16:16:40 +0000] [7755] [ERROR] Can't connect to ('0.0.0.0', 5000)
+[2017-10-31 16:17:13 +0000] [7775] [INFO] Starting gunicorn 19.7.1
+[2017-10-31 16:17:13 +0000] [7775] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:17:13 +0000] [7775] [ERROR] Retrying in 1 second.
+[2017-10-31 16:17:14 +0000] [7775] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:17:14 +0000] [7775] [ERROR] Retrying in 1 second.
+[2017-10-31 16:17:15 +0000] [7775] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:17:15 +0000] [7775] [ERROR] Retrying in 1 second.
+[2017-10-31 16:17:16 +0000] [7775] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:17:16 +0000] [7775] [ERROR] Retrying in 1 second.
+[2017-10-31 16:17:17 +0000] [7775] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:17:17 +0000] [7775] [ERROR] Retrying in 1 second.
+[2017-10-31 16:17:18 +0000] [7775] [ERROR] Can't connect to ('0.0.0.0', 5000)
+[2017-10-31 16:21:05 +0000] [7817] [INFO] Starting gunicorn 19.7.1
+[2017-10-31 16:21:05 +0000] [7817] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:21:05 +0000] [7817] [ERROR] Retrying in 1 second.
+[2017-10-31 16:21:06 +0000] [7817] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:21:06 +0000] [7817] [ERROR] Retrying in 1 second.
+[2017-10-31 16:21:07 +0000] [7817] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:21:07 +0000] [7817] [ERROR] Retrying in 1 second.
+[2017-10-31 16:21:08 +0000] [7817] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:21:08 +0000] [7817] [ERROR] Retrying in 1 second.
+[2017-10-31 16:21:09 +0000] [7817] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2017-10-31 16:21:09 +0000] [7817] [ERROR] Retrying in 1 second.
+[2017-10-31 16:21:10 +0000] [7817] [ERROR] Can't connect to ('0.0.0.0', 5000)
+[2017-10-31 16:22:33 +0000] [7860] [INFO] Starting gunicorn 19.7.1
+[2017-10-31 16:22:33 +0000] [7860] [INFO] Listening at: http://0.0.0.0:80 (7860)
+[2017-10-31 16:22:33 +0000] [7860] [INFO] Using worker: gevent
+[2017-10-31 16:22:33 +0000] [7863] [INFO] Booting worker with pid: 7863
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:44 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:45 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:22:45 +0000] [7860] [INFO] Handling signal: winch
+[2017-10-31 16:23:44 +0000] [7860] [INFO] Handling signal: int
+[2017-10-31 16:23:44 +0000] [7863] [INFO] Worker exiting (pid: 7863)
+[2017-10-31 16:23:45 +0000] [7860] [INFO] Shutting down: Master
+[2017-10-31 16:24:10 +0000] [7885] [INFO] Starting gunicorn 19.7.1
+[2017-10-31 16:24:10 +0000] [7885] [INFO] Listening at: http://0.0.0.0:80 (7885)
+[2017-10-31 16:24:10 +0000] [7885] [INFO] Using worker: gevent
+[2017-10-31 16:24:10 +0000] [7888] [INFO] Booting worker with pid: 7888
+[2017-10-31 16:24:10 +0000] [7889] [INFO] Booting worker with pid: 7889
+[2017-10-31 16:24:10 +0000] [7890] [INFO] Booting worker with pid: 7890
+[2017-10-31 16:24:10 +0000] [7891] [INFO] Booting worker with pid: 7891
+[2017-10-31 16:24:10 +0000] [7892] [INFO] Booting worker with pid: 7892
+[2017-10-31 16:24:10 +0000] [7893] [INFO] Booting worker with pid: 7893
+[2017-10-31 16:24:10 +0000] [7894] [INFO] Booting worker with pid: 7894
+[2017-10-31 16:24:10 +0000] [7895] [INFO] Booting worker with pid: 7895
+[2017-10-31 16:32:16 +0000] [7885] [INFO] Handling signal: int
+[2017-10-31 16:32:16 +0000] [7888] [INFO] Worker exiting (pid: 7888)
+[2017-10-31 16:32:16 +0000] [7891] [INFO] Worker exiting (pid: 7891)
+[2017-10-31 16:32:16 +0000] [7892] [INFO] Worker exiting (pid: 7892)
+[2017-10-31 16:32:16 +0000] [7895] [INFO] Worker exiting (pid: 7895)
+[2017-10-31 16:32:16 +0000] [7894] [INFO] Worker exiting (pid: 7894)
+[2017-10-31 16:32:16 +0000] [7893] [INFO] Worker exiting (pid: 7893)
+[2017-10-31 16:32:16 +0000] [7889] [INFO] Worker exiting (pid: 7889)
+[2017-10-31 16:32:16 +0000] [7890] [INFO] Worker exiting (pid: 7890)
+[2017-10-31 16:32:16 +0000] [7885] [INFO] Shutting down: Master
+[2017-10-31 16:32:20 +0000] [8186] [INFO] Starting gunicorn 19.7.1
+[2017-10-31 16:32:20 +0000] [8186] [INFO] Listening at: http://0.0.0.0:80 (8186)
+[2017-10-31 16:32:20 +0000] [8186] [INFO] Using worker: gevent
+[2017-10-31 16:32:20 +0000] [8189] [INFO] Booting worker with pid: 8189
+[2017-10-31 16:32:20 +0000] [8190] [INFO] Booting worker with pid: 8190
+[2017-10-31 16:32:20 +0000] [8191] [INFO] Booting worker with pid: 8191
+[2017-10-31 16:32:20 +0000] [8192] [INFO] Booting worker with pid: 8192
+[2017-10-31 16:32:20 +0000] [8193] [INFO] Booting worker with pid: 8193
+[2017-10-31 16:32:20 +0000] [8194] [INFO] Booting worker with pid: 8194
+[2017-10-31 16:32:20 +0000] [8195] [INFO] Booting worker with pid: 8195
+[2017-10-31 16:32:20 +0000] [8196] [INFO] Booting worker with pid: 8196
+[2017-10-31 17:04:11 +0000] [8186] [INFO] Handling signal: hup
+[2017-10-31 17:04:11 +0000] [8186] [INFO] Hang up: Master
+[2017-10-31 17:04:11 +0000] [8694] [INFO] Booting worker with pid: 8694
+[2017-10-31 17:04:11 +0000] [8698] [INFO] Booting worker with pid: 8698
+[2017-10-31 17:04:11 +0000] [8699] [INFO] Booting worker with pid: 8699
+[2017-10-31 17:04:11 +0000] [8700] [INFO] Booting worker with pid: 8700
+[2017-10-31 17:04:11 +0000] [8701] [INFO] Booting worker with pid: 8701
+[2017-10-31 17:04:11 +0000] [8186] [INFO] Handling signal: term
+[2017-10-31 17:04:11 +0000] [8702] [INFO] Booting worker with pid: 8702
+[2017-10-31 17:04:11 +0000] [8727] [INFO] Booting worker with pid: 8727
+[2017-10-31 17:04:11 +0000] [8728] [INFO] Booting worker with pid: 8728
+[2017-10-31 17:04:41 +0000] [8186] [INFO] Shutting down: Master
