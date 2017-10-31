@@ -98,3 +98,35 @@
 [2017-10-31 17:04:11 +0000] [8727] [INFO] Booting worker with pid: 8727
 [2017-10-31 17:04:11 +0000] [8728] [INFO] Booting worker with pid: 8728
 [2017-10-31 17:04:41 +0000] [8186] [INFO] Shutting down: Master
+[2017-10-31 21:41:17 +0000] [1465] [INFO] Starting gunicorn 19.7.1
+[2017-10-31 21:41:17 +0000] [1465] [INFO] Listening at: http://0.0.0.0:80 (1465)
+[2017-10-31 21:41:17 +0000] [1465] [INFO] Using worker: gevent
+[2017-10-31 21:41:17 +0000] [1468] [INFO] Booting worker with pid: 1468
+[2017-10-31 21:41:17 +0000] [1469] [INFO] Booting worker with pid: 1469
+[2017-10-31 21:41:17 +0000] [1470] [INFO] Booting worker with pid: 1470
+[2017-10-31 21:41:17 +0000] [1471] [INFO] Booting worker with pid: 1471
+[2017-10-31 21:41:17 +0000] [1472] [INFO] Booting worker with pid: 1472
+[2017-10-31 21:41:17 +0000] [1473] [INFO] Booting worker with pid: 1473
+[2017-10-31 21:41:17 +0000] [1474] [INFO] Booting worker with pid: 1474
+[2017-10-31 21:41:17 +0000] [1475] [INFO] Booting worker with pid: 1475
+[2017-10-31 21:41:19 +0000] [1465] [INFO] Handling signal: int
+[2017-10-31 21:41:20 +0000] [1468] [INFO] Worker exiting (pid: 1468)
+[2017-10-31 21:41:20 +0000] [1469] [INFO] Worker exiting (pid: 1469)
+[2017-10-31 21:41:20 +0000] [1471] [INFO] Worker exiting (pid: 1471)
+[2017-10-31 21:41:20 +0000] [1470] [INFO] Worker exiting (pid: 1470)
+[2017-10-31 21:41:20 +0000] [1472] [INFO] Worker exiting (pid: 1472)
+[2017-10-31 21:41:20 +0000] [1474] [INFO] Worker exiting (pid: 1474)
+[2017-10-31 21:41:20 +0000] [1473] [INFO] Worker exiting (pid: 1473)
+[2017-10-31 21:41:20 +0000] [1475] [INFO] Worker exiting (pid: 1475)
+[2017-10-31 21:41:21 +0000] [1465] [INFO] Shutting down: Master
+[2017-10-31 21:41:24 +0000] [1502] [INFO] Starting gunicorn 19.7.1
+[2017-10-31 21:41:24 +0000] [1502] [INFO] Listening at: http://0.0.0.0:80 (1502)
+[2017-10-31 21:41:24 +0000] [1502] [INFO] Using worker: gevent
+[2017-10-31 21:41:24 +0000] [1505] [INFO] Booting worker with pid: 1505
+[2017-10-31 21:41:24 +0000] [1506] [INFO] Booting worker with pid: 1506
+[2017-10-31 21:41:24 +0000] [1507] [INFO] Booting worker with pid: 1507
+[2017-10-31 21:41:24 +0000] [1508] [INFO] Booting worker with pid: 1508
+[2017-10-31 21:41:24 +0000] [1509] [INFO] Booting worker with pid: 1509
+[2017-10-31 21:41:24 +0000] [1510] [INFO] Booting worker with pid: 1510
+[2017-10-31 21:41:24 +0000] [1511] [INFO] Booting worker with pid: 1511
+[2017-10-31 21:41:24 +0000] [1512] [INFO] Booting worker with pid: 1512
