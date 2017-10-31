@@ -1,4 +1,4 @@
 db_config = {'user': 'ece1779',
-             'password': 'ece1779pass',
-             'host': 'ece1779-db.cv9ackzmroab.us-east-1.rds.amazonaws.com',
+             'password': 'secret',
+             'host': '172.31.85.72',
              'database': 'ece1779'}
