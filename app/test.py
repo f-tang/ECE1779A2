@@ -97,29 +97,36 @@ def test_fileupload():
             else:
                 pID = x[0] + 1
 
-            # save file
             filename = str(file.filename).split('.')[-1]
             filename = escape_string(str(pID) + '_' + str(get_milliseconds()) + '.' + filename)
+
+            # insert image info into database
+            cursor.execute("INSERT INTO images ( pName, users_userID) VALUES (%s, %s)",
+                           (filename, int(uID)))
+            cnx.commit()
+
+            # save file
             destination = "/".join([target, filename])
             tmp_dest = "/".join([tmp_target, filename])
             file.save(tmp_dest)
             file.seek(0)
             s3.put_object(Key=destination, Body=file, ACL='public-read')
 
-            # insert image info into database
-            cursor.execute("INSERT INTO images (pID, pName, users_userID) VALUES (%s, %s, %s)",
-                           (int(pID), filename, int(uID)))
 
             # apply image transformations
             for i in range(3):
-                cursor.execute("SELECT max(tpID) FROM trimages")
-                x = cursor.fetchone()
-                if x[0] == None:
-                    tpID = 1
-                else:
-                    tpID = x[0] + 1
+                # cursor.execute("SELECT max(tpID) FROM trimages")
+                # x = cursor.fetchone()
+                # if x[0] == None:
+                #     tpID = 1
+                # else:
+                #     tpID = x[0] + 1
 
                 tfilename = escape_string("tr" + str(i) + "_" + filename)
+                cursor.execute("INSERT INTO trimages (tpName, images_pID) VALUES (%s, %s)",
+                                   (tfilename, int(pID)))
+                cnx.commit()
+
                 img = Image(filename=tmp_dest)
                 with img.clone() as tfile:
                     image_transfer(tfile, i)
@@ -129,11 +136,8 @@ def test_fileupload():
                     tdestination = "/".join([target, tfilename])
                     s3.put_object(Key=tdestination, Body=open(tmp_tdest, 'rb'), ACL='public-read')
 
-                    cursor.execute("INSERT INTO trimages (tpID, tpName, images_pID) VALUES (%s, %s, %s)",
-                                   (int(tpID), tfilename, int(pID)))
 
             shutil.rmtree(tmp_target)
-            cnx.commit()
             cursor.close()
             cnx.close()
 

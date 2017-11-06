@@ -87,6 +87,11 @@ def image_upload():
                 filename = str(file.filename).split('.')[-1]
                 filename = escape_string(str(pID) + '_' + str(get_milliseconds()) + '.' + filename)
 
+                # insert the image info into the database
+                cursor.execute("INSERT INTO images (pName, users_userID) VALUES (%s, %s)",
+                               (filename, int(uID)))
+                cnx.commit()
+
                 # save the image file
                 destination = "/".join([target, filename])
                 tmp_dest = "/".join([tmp_target, filename])
@@ -96,22 +101,23 @@ def image_upload():
                 s3.put_object(Key=destination, Body=file, ACL='public-read')
 
 
-                # insert the image info into the database
-                cursor.execute("INSERT INTO images (pID, pName, users_userID) VALUES (%s, %s, %s)",
-                               (int(pID), filename, int(uID)))
-
                 # apply image transformation
                 for i in range(3):
                     # give a tpID to the transformed image
-                    cursor.execute("SELECT max(tpID) FROM trimages")
-                    x = cursor.fetchone()
-                    if x[0] == None:
-                        tpID = 1
-                    else:
-                        tpID = x[0] + 1
+                    # cursor.execute("SELECT max(tpID) FROM trimages")
+                    # x = cursor.fetchone()
+                    # if x[0] == None:
+                    #     tpID = 1
+                    # else:
+                    #     tpID = x[0] + 1
 
                     # give a file name to the transformed image
                     tfilename = escape_string("tr" + str(i) + "_" + filename)
+
+                    # insert the image info into the database
+                    cursor.execute("INSERT INTO trimages (tpName, images_pID) VALUES (%s, %s)",
+                                (tfilename, int(pID)))
+                    cnx.commit()
 
                     # apply transformation
                     img = Image(filename=tmp_dest)
@@ -122,13 +128,10 @@ def image_upload():
                         tfile.save(filename=tmp_tdest)
                         tdestination = "/".join([target, tfilename])
                         s3.put_object(Key=tdestination, Body=open(tmp_tdest, 'rb'), ACL='public-read')
-                        # insert the image info into the database
-                        cursor.execute("INSERT INTO trimages (tpID, tpName, images_pID) VALUES (%s, %s, %s)",
-                                   (int(tpID), tfilename, int(pID)))
+
 
             # database commit, cleanup and garbage collect
             shutil.rmtree(tmp_target)
-            cnx.commit()
             cursor.close()
             cnx.close()
             gc.collect()

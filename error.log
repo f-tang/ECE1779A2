@@ -219,3 +219,234 @@
 [2017-11-06 03:08:59 +0000] [1909] [INFO] Booting worker with pid: 1909
 [2017-11-06 03:08:59 +0000] [1910] [INFO] Booting worker with pid: 1910
 [2017-11-06 03:08:59 +0000] [1911] [INFO] Booting worker with pid: 1911
+[2017-11-06 03:24:45 +0000] [1899] [INFO] Handling signal: term
+[2017-11-06 03:24:45 +0000] [1908] [INFO] Worker exiting (pid: 1908)
+[2017-11-06 03:24:45 +0000] [1907] [INFO] Worker exiting (pid: 1907)
+[2017-11-06 03:24:45 +0000] [1909] [INFO] Worker exiting (pid: 1909)
+[2017-11-06 03:24:45 +0000] [1911] [INFO] Worker exiting (pid: 1911)
+[2017-11-06 03:24:45 +0000] [1904] [INFO] Worker exiting (pid: 1904)
+[2017-11-06 03:24:45 +0000] [1910] [INFO] Worker exiting (pid: 1910)
+[2017-11-06 03:24:46 +0000] [1905] [INFO] Worker exiting (pid: 1905)
+[2017-11-06 03:24:46 +0000] [1906] [INFO] Worker exiting (pid: 1906)
+[2017-11-06 03:24:46 +0000] [1899] [INFO] Shutting down: Master
+[2017-11-06 03:26:54 +0000] [1024] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 03:26:54 +0000] [1024] [INFO] Listening at: http://0.0.0.0:5000 (1024)
+[2017-11-06 03:26:54 +0000] [1024] [INFO] Using worker: gevent
+[2017-11-06 03:26:54 +0000] [1222] [INFO] Booting worker with pid: 1222
+[2017-11-06 03:26:54 +0000] [1223] [INFO] Booting worker with pid: 1223
+[2017-11-06 03:26:55 +0000] [1228] [INFO] Booting worker with pid: 1228
+[2017-11-06 03:26:55 +0000] [1229] [INFO] Booting worker with pid: 1229
+[2017-11-06 03:26:55 +0000] [1233] [INFO] Booting worker with pid: 1233
+[2017-11-06 03:26:55 +0000] [1235] [INFO] Booting worker with pid: 1235
+[2017-11-06 03:26:55 +0000] [1241] [INFO] Booting worker with pid: 1241
+[2017-11-06 03:26:55 +0000] [1242] [INFO] Booting worker with pid: 1242
+[2017-11-06 04:36:25 +0000] [1024] [INFO] Handling signal: term
+[2017-11-06 04:36:26 +0000] [1233] [INFO] Worker exiting (pid: 1233)
+[2017-11-06 04:36:26 +0000] [1223] [INFO] Worker exiting (pid: 1223)
+[2017-11-06 04:36:26 +0000] [1228] [INFO] Worker exiting (pid: 1228)
+[2017-11-06 04:36:26 +0000] [1242] [INFO] Worker exiting (pid: 1242)
+[2017-11-06 04:36:26 +0000] [1222] [INFO] Worker exiting (pid: 1222)
+[2017-11-06 04:36:26 +0000] [1229] [INFO] Worker exiting (pid: 1229)
+[2017-11-06 04:36:26 +0000] [1235] [INFO] Worker exiting (pid: 1235)
+[2017-11-06 04:36:26 +0000] [1241] [INFO] Worker exiting (pid: 1241)
+[2017-11-06 04:36:27 +0000] [1024] [INFO] Shutting down: Master
+[2017-11-06 15:29:13 +0000] [1007] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 15:29:13 +0000] [1007] [INFO] Listening at: http://0.0.0.0:5000 (1007)
+[2017-11-06 15:29:13 +0000] [1007] [INFO] Using worker: gevent
+[2017-11-06 15:29:13 +0000] [1222] [INFO] Booting worker with pid: 1222
+[2017-11-06 15:29:13 +0000] [1227] [INFO] Booting worker with pid: 1227
+[2017-11-06 15:29:13 +0000] [1228] [INFO] Booting worker with pid: 1228
+[2017-11-06 15:29:13 +0000] [1229] [INFO] Booting worker with pid: 1229
+[2017-11-06 15:29:14 +0000] [1234] [INFO] Booting worker with pid: 1234
+[2017-11-06 15:29:14 +0000] [1240] [INFO] Booting worker with pid: 1240
+[2017-11-06 15:29:14 +0000] [1241] [INFO] Booting worker with pid: 1241
+[2017-11-06 15:29:14 +0000] [1244] [INFO] Booting worker with pid: 1244
+[2017-11-06 15:42:46 +0000] [1007] [INFO] Handling signal: term
+[2017-11-06 15:42:46 +0000] [1222] [INFO] Worker exiting (pid: 1222)
+[2017-11-06 15:42:47 +0000] [1229] [INFO] Worker exiting (pid: 1229)
+[2017-11-06 15:42:47 +0000] [1227] [INFO] Worker exiting (pid: 1227)
+[2017-11-06 15:42:47 +0000] [1228] [INFO] Worker exiting (pid: 1228)
+[2017-11-06 15:42:47 +0000] [1234] [INFO] Worker exiting (pid: 1234)
+[2017-11-06 15:42:47 +0000] [1244] [INFO] Worker exiting (pid: 1244)
+[2017-11-06 15:42:47 +0000] [1241] [INFO] Worker exiting (pid: 1241)
+[2017-11-06 15:42:47 +0000] [1240] [INFO] Worker exiting (pid: 1240)
+[2017-11-06 15:42:47 +0000] [1007] [INFO] Shutting down: Master
+[2017-11-06 15:42:56 +0000] [2304] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 15:42:56 +0000] [2304] [INFO] Listening at: http://0.0.0.0:5000 (2304)
+[2017-11-06 15:42:56 +0000] [2304] [INFO] Using worker: gevent
+[2017-11-06 15:42:56 +0000] [2309] [INFO] Booting worker with pid: 2309
+[2017-11-06 15:42:56 +0000] [2310] [INFO] Booting worker with pid: 2310
+[2017-11-06 15:42:56 +0000] [2311] [INFO] Booting worker with pid: 2311
+[2017-11-06 15:42:56 +0000] [2312] [INFO] Booting worker with pid: 2312
+[2017-11-06 15:42:56 +0000] [2313] [INFO] Booting worker with pid: 2313
+[2017-11-06 15:42:56 +0000] [2314] [INFO] Booting worker with pid: 2314
+[2017-11-06 15:42:56 +0000] [2315] [INFO] Booting worker with pid: 2315
+[2017-11-06 15:42:56 +0000] [2316] [INFO] Booting worker with pid: 2316
+[2017-11-06 15:59:07 +0000] [2304] [INFO] Handling signal: term
+[2017-11-06 15:59:07 +0000] [2310] [INFO] Worker exiting (pid: 2310)
+[2017-11-06 15:59:07 +0000] [2311] [INFO] Worker exiting (pid: 2311)
+[2017-11-06 15:59:07 +0000] [2312] [INFO] Worker exiting (pid: 2312)
+[2017-11-06 15:59:07 +0000] [2313] [INFO] Worker exiting (pid: 2313)
+[2017-11-06 15:59:07 +0000] [2314] [INFO] Worker exiting (pid: 2314)
+[2017-11-06 15:59:07 +0000] [2316] [INFO] Worker exiting (pid: 2316)
+[2017-11-06 15:59:07 +0000] [2315] [INFO] Worker exiting (pid: 2315)
+[2017-11-06 15:59:08 +0000] [2309] [INFO] Worker exiting (pid: 2309)
+[2017-11-06 15:59:08 +0000] [2304] [INFO] Shutting down: Master
+[2017-11-06 15:59:11 +0000] [2802] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 15:59:11 +0000] [2802] [INFO] Listening at: http://0.0.0.0:5000 (2802)
+[2017-11-06 15:59:11 +0000] [2802] [INFO] Using worker: gevent
+[2017-11-06 15:59:11 +0000] [2806] [INFO] Booting worker with pid: 2806
+[2017-11-06 15:59:11 +0000] [2807] [INFO] Booting worker with pid: 2807
+[2017-11-06 15:59:11 +0000] [2808] [INFO] Booting worker with pid: 2808
+[2017-11-06 15:59:11 +0000] [2809] [INFO] Booting worker with pid: 2809
+[2017-11-06 15:59:11 +0000] [2810] [INFO] Booting worker with pid: 2810
+[2017-11-06 15:59:11 +0000] [2811] [INFO] Booting worker with pid: 2811
+[2017-11-06 15:59:11 +0000] [2812] [INFO] Booting worker with pid: 2812
+[2017-11-06 15:59:11 +0000] [2813] [INFO] Booting worker with pid: 2813
+[2017-11-06 16:00:50 +0000] [2802] [INFO] Handling signal: term
+[2017-11-06 16:00:50 +0000] [2807] [INFO] Worker exiting (pid: 2807)
+[2017-11-06 16:00:51 +0000] [2808] [INFO] Worker exiting (pid: 2808)
+[2017-11-06 16:00:51 +0000] [2809] [INFO] Worker exiting (pid: 2809)
+[2017-11-06 16:00:51 +0000] [2810] [INFO] Worker exiting (pid: 2810)
+[2017-11-06 16:00:51 +0000] [2811] [INFO] Worker exiting (pid: 2811)
+[2017-11-06 16:00:51 +0000] [2812] [INFO] Worker exiting (pid: 2812)
+[2017-11-06 16:00:51 +0000] [2806] [INFO] Worker exiting (pid: 2806)
+[2017-11-06 16:00:51 +0000] [2813] [INFO] Worker exiting (pid: 2813)
+[2017-11-06 16:00:51 +0000] [2802] [INFO] Shutting down: Master
+[2017-11-06 16:00:52 +0000] [3010] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 16:00:52 +0000] [3010] [INFO] Listening at: http://0.0.0.0:5000 (3010)
+[2017-11-06 16:00:52 +0000] [3010] [INFO] Using worker: gevent
+[2017-11-06 16:00:52 +0000] [3015] [INFO] Booting worker with pid: 3015
+[2017-11-06 16:00:53 +0000] [3016] [INFO] Booting worker with pid: 3016
+[2017-11-06 16:00:53 +0000] [3017] [INFO] Booting worker with pid: 3017
+[2017-11-06 16:00:53 +0000] [3018] [INFO] Booting worker with pid: 3018
+[2017-11-06 16:00:53 +0000] [3019] [INFO] Booting worker with pid: 3019
+[2017-11-06 16:00:53 +0000] [3020] [INFO] Booting worker with pid: 3020
+[2017-11-06 16:00:53 +0000] [3021] [INFO] Booting worker with pid: 3021
+[2017-11-06 16:00:53 +0000] [3022] [INFO] Booting worker with pid: 3022
+[2017-11-06 16:11:05 +0000] [3010] [INFO] Handling signal: term
+[2017-11-06 16:11:05 +0000] [3016] [INFO] Worker exiting (pid: 3016)
+[2017-11-06 16:11:05 +0000] [3017] [INFO] Worker exiting (pid: 3017)
+[2017-11-06 16:11:05 +0000] [3018] [INFO] Worker exiting (pid: 3018)
+[2017-11-06 16:11:06 +0000] [3019] [INFO] Worker exiting (pid: 3019)
+[2017-11-06 16:11:06 +0000] [3020] [INFO] Worker exiting (pid: 3020)
+[2017-11-06 16:11:06 +0000] [3021] [INFO] Worker exiting (pid: 3021)
+[2017-11-06 16:11:06 +0000] [3022] [INFO] Worker exiting (pid: 3022)
+[2017-11-06 16:11:06 +0000] [3015] [INFO] Worker exiting (pid: 3015)
+[2017-11-06 16:11:06 +0000] [3010] [INFO] Shutting down: Master
+[2017-11-06 16:11:07 +0000] [3247] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 16:11:07 +0000] [3247] [INFO] Listening at: http://0.0.0.0:5000 (3247)
+[2017-11-06 16:11:07 +0000] [3247] [INFO] Using worker: gevent
+[2017-11-06 16:11:07 +0000] [3252] [INFO] Booting worker with pid: 3252
+[2017-11-06 16:11:07 +0000] [3253] [INFO] Booting worker with pid: 3253
+[2017-11-06 16:11:07 +0000] [3254] [INFO] Booting worker with pid: 3254
+[2017-11-06 16:11:07 +0000] [3256] [INFO] Booting worker with pid: 3256
+[2017-11-06 16:11:07 +0000] [3255] [INFO] Booting worker with pid: 3255
+[2017-11-06 16:11:07 +0000] [3257] [INFO] Booting worker with pid: 3257
+[2017-11-06 16:11:08 +0000] [3258] [INFO] Booting worker with pid: 3258
+[2017-11-06 16:11:08 +0000] [3259] [INFO] Booting worker with pid: 3259
+[2017-11-06 16:12:14 +0000] [3247] [INFO] Handling signal: term
+[2017-11-06 16:12:14 +0000] [3254] [INFO] Worker exiting (pid: 3254)
+[2017-11-06 16:12:14 +0000] [3256] [INFO] Worker exiting (pid: 3256)
+[2017-11-06 16:12:14 +0000] [3255] [INFO] Worker exiting (pid: 3255)
+[2017-11-06 16:12:14 +0000] [3257] [INFO] Worker exiting (pid: 3257)
+[2017-11-06 16:12:14 +0000] [3258] [INFO] Worker exiting (pid: 3258)
+[2017-11-06 16:12:14 +0000] [3259] [INFO] Worker exiting (pid: 3259)
+[2017-11-06 16:12:14 +0000] [3252] [INFO] Worker exiting (pid: 3252)
+[2017-11-06 16:12:15 +0000] [3253] [INFO] Worker exiting (pid: 3253)
+[2017-11-06 16:12:15 +0000] [3247] [INFO] Shutting down: Master
+[2017-11-06 16:12:16 +0000] [3434] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 16:12:16 +0000] [3434] [INFO] Listening at: http://0.0.0.0:5000 (3434)
+[2017-11-06 16:12:16 +0000] [3434] [INFO] Using worker: gevent
+[2017-11-06 16:12:16 +0000] [3438] [INFO] Booting worker with pid: 3438
+[2017-11-06 16:12:16 +0000] [3439] [INFO] Booting worker with pid: 3439
+[2017-11-06 16:12:16 +0000] [3440] [INFO] Booting worker with pid: 3440
+[2017-11-06 16:12:16 +0000] [3441] [INFO] Booting worker with pid: 3441
+[2017-11-06 16:12:16 +0000] [3442] [INFO] Booting worker with pid: 3442
+[2017-11-06 16:12:16 +0000] [3443] [INFO] Booting worker with pid: 3443
+[2017-11-06 16:12:16 +0000] [3444] [INFO] Booting worker with pid: 3444
+[2017-11-06 16:12:16 +0000] [3445] [INFO] Booting worker with pid: 3445
+[2017-11-06 16:13:09 +0000] [3434] [INFO] Handling signal: term
+[2017-11-06 16:13:09 +0000] [3438] [INFO] Worker exiting (pid: 3438)
+[2017-11-06 16:13:09 +0000] [3439] [INFO] Worker exiting (pid: 3439)
+[2017-11-06 16:13:09 +0000] [3440] [INFO] Worker exiting (pid: 3440)
+[2017-11-06 16:13:09 +0000] [3441] [INFO] Worker exiting (pid: 3441)
+[2017-11-06 16:13:09 +0000] [3442] [INFO] Worker exiting (pid: 3442)
+[2017-11-06 16:13:09 +0000] [3443] [INFO] Worker exiting (pid: 3443)
+[2017-11-06 16:13:09 +0000] [3444] [INFO] Worker exiting (pid: 3444)
+[2017-11-06 16:13:09 +0000] [3445] [INFO] Worker exiting (pid: 3445)
+[2017-11-06 16:13:10 +0000] [3434] [INFO] Shutting down: Master
+[2017-11-06 16:13:11 +0000] [3611] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 16:13:11 +0000] [3611] [INFO] Listening at: http://0.0.0.0:5000 (3611)
+[2017-11-06 16:13:11 +0000] [3611] [INFO] Using worker: gevent
+[2017-11-06 16:13:11 +0000] [3616] [INFO] Booting worker with pid: 3616
+[2017-11-06 16:13:11 +0000] [3617] [INFO] Booting worker with pid: 3617
+[2017-11-06 16:13:11 +0000] [3619] [INFO] Booting worker with pid: 3619
+[2017-11-06 16:13:11 +0000] [3618] [INFO] Booting worker with pid: 3618
+[2017-11-06 16:13:11 +0000] [3620] [INFO] Booting worker with pid: 3620
+[2017-11-06 16:13:11 +0000] [3621] [INFO] Booting worker with pid: 3621
+[2017-11-06 16:13:11 +0000] [3622] [INFO] Booting worker with pid: 3622
+[2017-11-06 16:13:11 +0000] [3623] [INFO] Booting worker with pid: 3623
+[2017-11-06 16:13:56 +0000] [3611] [INFO] Handling signal: term
+[2017-11-06 16:13:56 +0000] [3617] [INFO] Worker exiting (pid: 3617)
+[2017-11-06 16:13:56 +0000] [3619] [INFO] Worker exiting (pid: 3619)
+[2017-11-06 16:13:56 +0000] [3620] [INFO] Worker exiting (pid: 3620)
+[2017-11-06 16:13:56 +0000] [3618] [INFO] Worker exiting (pid: 3618)
+[2017-11-06 16:13:56 +0000] [3621] [INFO] Worker exiting (pid: 3621)
+[2017-11-06 16:13:56 +0000] [3622] [INFO] Worker exiting (pid: 3622)
+[2017-11-06 16:13:56 +0000] [3623] [INFO] Worker exiting (pid: 3623)
+[2017-11-06 16:13:57 +0000] [3616] [INFO] Worker exiting (pid: 3616)
+[2017-11-06 16:13:57 +0000] [3611] [INFO] Shutting down: Master
+[2017-11-06 16:13:58 +0000] [3794] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 16:13:58 +0000] [3794] [INFO] Listening at: http://0.0.0.0:5000 (3794)
+[2017-11-06 16:13:58 +0000] [3794] [INFO] Using worker: gevent
+[2017-11-06 16:13:58 +0000] [3799] [INFO] Booting worker with pid: 3799
+[2017-11-06 16:13:58 +0000] [3800] [INFO] Booting worker with pid: 3800
+[2017-11-06 16:13:58 +0000] [3801] [INFO] Booting worker with pid: 3801
+[2017-11-06 16:13:58 +0000] [3802] [INFO] Booting worker with pid: 3802
+[2017-11-06 16:13:59 +0000] [3803] [INFO] Booting worker with pid: 3803
+[2017-11-06 16:13:59 +0000] [3804] [INFO] Booting worker with pid: 3804
+[2017-11-06 16:13:59 +0000] [3805] [INFO] Booting worker with pid: 3805
+[2017-11-06 16:13:59 +0000] [3806] [INFO] Booting worker with pid: 3806
+[2017-11-06 16:15:09 +0000] [3794] [INFO] Handling signal: term
+[2017-11-06 16:15:09 +0000] [3800] [INFO] Worker exiting (pid: 3800)
+[2017-11-06 16:15:09 +0000] [3801] [INFO] Worker exiting (pid: 3801)
+[2017-11-06 16:15:09 +0000] [3802] [INFO] Worker exiting (pid: 3802)
+[2017-11-06 16:15:09 +0000] [3803] [INFO] Worker exiting (pid: 3803)
+[2017-11-06 16:15:10 +0000] [3804] [INFO] Worker exiting (pid: 3804)
+[2017-11-06 16:15:10 +0000] [3805] [INFO] Worker exiting (pid: 3805)
+[2017-11-06 16:15:10 +0000] [3806] [INFO] Worker exiting (pid: 3806)
+[2017-11-06 16:15:10 +0000] [3799] [INFO] Worker exiting (pid: 3799)
+[2017-11-06 16:15:10 +0000] [3794] [INFO] Shutting down: Master
+[2017-11-06 16:15:11 +0000] [3981] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 16:15:11 +0000] [3981] [INFO] Listening at: http://0.0.0.0:5000 (3981)
+[2017-11-06 16:15:11 +0000] [3981] [INFO] Using worker: gevent
+[2017-11-06 16:15:11 +0000] [3986] [INFO] Booting worker with pid: 3986
+[2017-11-06 16:15:11 +0000] [3987] [INFO] Booting worker with pid: 3987
+[2017-11-06 16:15:12 +0000] [3988] [INFO] Booting worker with pid: 3988
+[2017-11-06 16:15:12 +0000] [3989] [INFO] Booting worker with pid: 3989
+[2017-11-06 16:15:12 +0000] [3990] [INFO] Booting worker with pid: 3990
+[2017-11-06 16:15:12 +0000] [3991] [INFO] Booting worker with pid: 3991
+[2017-11-06 16:15:12 +0000] [3992] [INFO] Booting worker with pid: 3992
+[2017-11-06 16:15:12 +0000] [3993] [INFO] Booting worker with pid: 3993
+[2017-11-06 16:16:08 +0000] [3981] [INFO] Handling signal: term
+[2017-11-06 16:16:08 +0000] [3988] [INFO] Worker exiting (pid: 3988)
+[2017-11-06 16:16:08 +0000] [3989] [INFO] Worker exiting (pid: 3989)
+[2017-11-06 16:16:08 +0000] [3991] [INFO] Worker exiting (pid: 3991)
+[2017-11-06 16:16:08 +0000] [3990] [INFO] Worker exiting (pid: 3990)
+[2017-11-06 16:16:08 +0000] [3992] [INFO] Worker exiting (pid: 3992)
+[2017-11-06 16:16:08 +0000] [3993] [INFO] Worker exiting (pid: 3993)
+[2017-11-06 16:16:08 +0000] [3986] [INFO] Worker exiting (pid: 3986)
+[2017-11-06 16:16:09 +0000] [3987] [INFO] Worker exiting (pid: 3987)
+[2017-11-06 16:16:09 +0000] [3981] [INFO] Shutting down: Master
+[2017-11-06 16:16:10 +0000] [4163] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 16:16:10 +0000] [4163] [INFO] Listening at: http://0.0.0.0:5000 (4163)
+[2017-11-06 16:16:10 +0000] [4163] [INFO] Using worker: gevent
+[2017-11-06 16:16:10 +0000] [4168] [INFO] Booting worker with pid: 4168
+[2017-11-06 16:16:10 +0000] [4169] [INFO] Booting worker with pid: 4169
+[2017-11-06 16:16:10 +0000] [4170] [INFO] Booting worker with pid: 4170
+[2017-11-06 16:16:10 +0000] [4171] [INFO] Booting worker with pid: 4171
+[2017-11-06 16:16:10 +0000] [4172] [INFO] Booting worker with pid: 4172
+[2017-11-06 16:16:10 +0000] [4173] [INFO] Booting worker with pid: 4173
+[2017-11-06 16:16:10 +0000] [4174] [INFO] Booting worker with pid: 4174
+[2017-11-06 16:16:10 +0000] [4175] [INFO] Booting worker with pid: 4175

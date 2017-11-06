@@ -108,15 +108,15 @@ def signup_form():
             else:
                 # give a userID to the user
                 cursor.execute("SELECT max(userID) AS max_value FROM users")
-                x = cursor.fetchone()
-                if x[0] == None:
-                    uid = 1
-                else:
-                    uid = x[0] + 1
+                # x = cursor.fetchone()
+                # if x[0] == None:
+                #     uid = 1
+                # else:
+                #     uid = x[0] + 1
 
                 # update database
-                cursor.execute("INSERT INTO users (userID, username, password, email) VALUES (%s, %s, %s, %s)",
-                               (int(uid), escape_string(username), escape_string(password), escape_string(email)))
+                cursor.execute("INSERT INTO users (username, password, email) VALUES (%s, %s, %s)",
+                               (escape_string(username), escape_string(password), escape_string(email)))
                 cnx.commit()
 
                 flash("Thanks for signing up!")
