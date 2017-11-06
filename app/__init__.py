@@ -59,7 +59,7 @@ def get_s3client():
     return s3
 
 def get_milliseconds():
-    millis = int(round(time.time() * 1000))
+    millis = int(round(time.time() * 1000000))
     return millis
 
 

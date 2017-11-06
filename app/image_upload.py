@@ -85,7 +85,7 @@ def image_upload():
 
                 # give a new image name accepted by database
                 filename = str(file.filename).split('.')[-1]
-                filename = escape_string(str(pID) + '_' + str(get_milliseconds()) + '.' + filename)
+                filename = escape_string(str(get_milliseconds()) + '.' + filename)
 
                 # insert the image info into the database
                 cursor.execute("INSERT INTO images (pName, users_userID) VALUES (%s, %s)",
@@ -99,6 +99,12 @@ def image_upload():
                 file.save(tmp_dest)
                 file.seek(0)
                 s3.put_object(Key=destination, Body=file, ACL='public-read')
+
+                # get pID of the new image
+                cursor.execute("SELECT pID FROM images WHERE pName = (%s)",
+                               (filename))
+                x = cursor.fetchone()
+                pID = x[0]
 
 
                 # apply image transformation

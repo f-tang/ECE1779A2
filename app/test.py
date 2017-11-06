@@ -89,16 +89,9 @@ def test_fileupload():
             if not os.path.isdir(tmp_target):
                 os.mkdir(tmp_target)
 
-            # give a pID for the new image
-            cursor.execute("SELECT max(pID) FROM images")
-            x = cursor.fetchone()
-            if x[0] == None:
-                pID = 1
-            else:
-                pID = x[0] + 1
 
             filename = str(file.filename).split('.')[-1]
-            filename = escape_string(str(pID) + '_' + str(get_milliseconds()) + '.' + filename)
+            filename = escape_string(str(get_milliseconds()) + '.' + filename)
 
             # insert image info into database
             cursor.execute("INSERT INTO images ( pName, users_userID) VALUES (%s, %s)",
@@ -112,6 +105,11 @@ def test_fileupload():
             file.seek(0)
             s3.put_object(Key=destination, Body=file, ACL='public-read')
 
+            # get pID of the new image
+            cursor.execute("SELECT pID FROM images WHERE pName = (%s)",
+                            (filename))
+            x = cursor.fetchone()
+            pID = x[0]
 
             # apply image transformations
             for i in range(3):
