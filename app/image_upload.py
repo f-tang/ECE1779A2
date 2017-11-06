@@ -62,6 +62,8 @@ def image_upload():
             # check if file exists in the request
             if 'file' not in request.files:
                 error = "file does not exist"
+                cursor.close()
+                cnx.close()
                 return render_template("image-upload.html", title="upload images", error=error)
 
             # get the list for uploaded files
@@ -69,13 +71,15 @@ def image_upload():
                 # double check if the file exists
                 if file == None or file.filename == '':
                     error = "file does not exist"
+                    cursor.close()
+                    cnx.close()
                     return render_template("image-upload.html", title="upload images", error=error)
 
                 # give a pID to the new image
                 cursor.execute("SELECT max(pID) FROM images")
                 x = cursor.fetchone()
                 if x[0] == None:
-                    pID = 1;
+                    pID = 1
                 else:
                     pID = x[0] + 1
 
@@ -102,7 +106,7 @@ def image_upload():
                     cursor.execute("SELECT max(tpID) FROM trimages")
                     x = cursor.fetchone()
                     if x[0] == None:
-                        tpID = 1;
+                        tpID = 1
                     else:
                         tpID = x[0] + 1
 

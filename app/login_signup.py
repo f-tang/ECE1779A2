@@ -28,6 +28,8 @@ def login_form():
             # check if form is validated
             if not form.validate_on_submit():
                 error = "request is invalidated"
+                cursor.close()
+                cnx.close()
                 return render_template("login-form.html", title='Login', form=form, error=error)
 
             # verify user and password
@@ -36,17 +38,25 @@ def login_form():
             x = cursor.fetchone()
             if x is None:
                 error = "Username does not exist"
+                cursor.close()
+                cnx.close()
                 return render_template("login-form.html", title='Login', form=form, error=error)
             data = x[0]
             if sha256_crypt.verify(form.password.data, data):
                 session['logged_in'] = True
                 session['username'] = form.username.data
                 flash("You are now logged in")
+                cursor.close()
+                cnx.close()
                 return redirect(url_for("main"))
             else:
                 error = "Invalid credentials, try again."
+                cursor.close()
+                cnx.close()
                 return render_template("login-form.html", title='Login', form=form, error=error)
 
+        cursor.close()
+        cnx.close()
         gc.collect()
         return render_template("login-form.html", title='Login', form=form, error=error)
 
@@ -92,6 +102,8 @@ def signup_form():
             x = cursor.fetchone()
             if not x is None:
                 error = "That username is already taken"
+                cursor.close()
+                cnx.close()
                 return render_template('signup-form.html', title='sign up', form=form, error=error)
             else:
                 # give a userID to the user

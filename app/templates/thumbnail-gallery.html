@@ -26,10 +26,10 @@ padding-top: 56px;
     <ul class="list-unstyled">
         Click <a href="{{url_for('image_upload')}}">here</a> to upload more images
     </ul>
-    <div class="row text-center text-lg-left">
+    <div class="row text-center text-xs-left">
         {% for image in images %}
             <div class="col-lg-3 col-md-4 col-xs-6">
-                <a href="{{url_for('full_image', username=session.username, image=image)}}" class="d-block mb-4 h-10">
+                <a href="{{url_for('full_image', username=session.username, image=image)}}" class="d-block mb-8 h-5">
                     <img class="img-fluid img-thumbnail" src="{{ image }}" alt="">
                 </a>
             </div>

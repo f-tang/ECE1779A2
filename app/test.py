@@ -41,7 +41,6 @@ def test_fileupload():
         target = IMAGES_PATH + username
 
         try:
-
             cnx = get_db()
             cursor = cnx.cursor()
             s3 = get_s3bucket()
@@ -52,16 +51,22 @@ def test_fileupload():
             x = cursor.fetchone()
             if x is None:
                 error = "Invalid credentials, try again."
+                cursor.close()
+                cnx.close()
                 return render_template("test-form.html", error=error)
 
             data = x[0]
             if not sha256_crypt.verify(password, data):
                 error = "Invalid credentials, try again."
+                cursor.close()
+                cnx.close()
                 return render_template("test-form.html", error=error)
 
             # check if 'uploadedfile' is in the request
             if 'uploadedfile' not in request.files:
                 error = "file does not exist"
+                cursor.close()
+                cnx.close()
                 return render_template("test-form.html", error=error)
 
             file = request.files['uploadedfile']
@@ -69,6 +74,8 @@ def test_fileupload():
             # double check if the file exists
             if file is None or file.filename == '':
                 error = "file does not exist"
+                cursor.close()
+                cnx.close()
                 return render_template("test-form.html", error=error)
 
             # determine the file path for upload
@@ -86,7 +93,7 @@ def test_fileupload():
             cursor.execute("SELECT max(pID) FROM images")
             x = cursor.fetchone()
             if x[0] == None:
-                pID = 1;
+                pID = 1
             else:
                 pID = x[0] + 1
 
@@ -108,7 +115,7 @@ def test_fileupload():
                 cursor.execute("SELECT max(tpID) FROM trimages")
                 x = cursor.fetchone()
                 if x[0] == None:
-                    tpID = 1;
+                    tpID = 1
                 else:
                     tpID = x[0] + 1
 
