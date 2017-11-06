@@ -35,7 +35,7 @@ def image_transfer(imagefile, method):
 @login_required
 def image_upload():
     error = ''
-    APP_RELATED = 'static/tmp/' + session['username']
+    APP_RELATED = 'static/tmp/' + session['username'] + str(get_milliseconds())
     tmp_target = os.path.join(APP_ROOT, APP_RELATED)
     target = IMAGES_PATH + session['username']
 

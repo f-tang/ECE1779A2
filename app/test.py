@@ -36,7 +36,7 @@ def test_fileupload():
         username = request.form["userID"]
         password = request.form["password"]
 
-        APP_RELATED = 'static/tmp/' + escape_string(username)
+        APP_RELATED = 'static/tmp/' + escape_string(username) + str(get_milliseconds())
         tmp_target = os.path.join(APP_ROOT, APP_RELATED)
         target = IMAGES_PATH + username
 

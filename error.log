@@ -492,3 +492,125 @@
 [2017-11-06 17:14:33 +0000] [2006] [INFO] Booting worker with pid: 2006
 [2017-11-06 17:14:33 +0000] [2007] [INFO] Booting worker with pid: 2007
 [2017-11-06 17:14:33 +0000] [2008] [INFO] Booting worker with pid: 2008
+[2017-11-06 17:18:57 +0000] [1996] [INFO] Handling signal: term
+[2017-11-06 17:18:57 +0000] [2004] [INFO] Worker exiting (pid: 2004)
+[2017-11-06 17:18:57 +0000] [2005] [INFO] Worker exiting (pid: 2005)
+[2017-11-06 17:18:57 +0000] [2001] [INFO] Worker exiting (pid: 2001)
+[2017-11-06 17:18:57 +0000] [2007] [INFO] Worker exiting (pid: 2007)
+[2017-11-06 17:18:57 +0000] [2008] [INFO] Worker exiting (pid: 2008)
+[2017-11-06 17:18:57 +0000] [2006] [INFO] Worker exiting (pid: 2006)
+[2017-11-06 17:18:57 +0000] [2002] [INFO] Worker exiting (pid: 2002)
+[2017-11-06 17:18:57 +0000] [2003] [INFO] Worker exiting (pid: 2003)
+[2017-11-06 17:18:58 +0000] [1996] [INFO] Shutting down: Master
+[2017-11-06 17:21:15 +0000] [1051] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 17:21:15 +0000] [1051] [INFO] Listening at: http://0.0.0.0:5000 (1051)
+[2017-11-06 17:21:15 +0000] [1051] [INFO] Using worker: gevent
+[2017-11-06 17:21:15 +0000] [1212] [INFO] Booting worker with pid: 1212
+[2017-11-06 17:21:15 +0000] [1214] [INFO] Booting worker with pid: 1214
+[2017-11-06 17:21:15 +0000] [1219] [INFO] Booting worker with pid: 1219
+[2017-11-06 17:21:15 +0000] [1222] [INFO] Booting worker with pid: 1222
+[2017-11-06 17:21:15 +0000] [1223] [INFO] Booting worker with pid: 1223
+[2017-11-06 17:21:15 +0000] [1224] [INFO] Booting worker with pid: 1224
+[2017-11-06 17:21:15 +0000] [1225] [INFO] Booting worker with pid: 1225
+[2017-11-06 17:21:15 +0000] [1226] [INFO] Booting worker with pid: 1226
+[2017-11-06 17:23:29 +0000] [1051] [INFO] Handling signal: term
+[2017-11-06 17:23:29 +0000] [1223] [INFO] Worker exiting (pid: 1223)
+[2017-11-06 17:23:29 +0000] [1214] [INFO] Worker exiting (pid: 1214)
+[2017-11-06 17:23:29 +0000] [1226] [INFO] Worker exiting (pid: 1226)
+[2017-11-06 17:23:29 +0000] [1212] [INFO] Worker exiting (pid: 1212)
+[2017-11-06 17:23:29 +0000] [1222] [INFO] Worker exiting (pid: 1222)
+[2017-11-06 17:23:29 +0000] [1224] [INFO] Worker exiting (pid: 1224)
+[2017-11-06 17:23:29 +0000] [1225] [INFO] Worker exiting (pid: 1225)
+[2017-11-06 17:23:29 +0000] [1219] [INFO] Worker exiting (pid: 1219)
+[2017-11-06 17:23:30 +0000] [1051] [INFO] Shutting down: Master
+[2017-11-06 18:18:03 +0000] [1053] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 18:18:03 +0000] [1053] [INFO] Listening at: http://0.0.0.0:5000 (1053)
+[2017-11-06 18:18:03 +0000] [1053] [INFO] Using worker: gevent
+[2017-11-06 18:18:03 +0000] [1214] [INFO] Booting worker with pid: 1214
+[2017-11-06 18:18:03 +0000] [1219] [INFO] Booting worker with pid: 1219
+[2017-11-06 18:18:03 +0000] [1226] [INFO] Booting worker with pid: 1226
+[2017-11-06 18:18:04 +0000] [1229] [INFO] Booting worker with pid: 1229
+[2017-11-06 18:18:04 +0000] [1230] [INFO] Booting worker with pid: 1230
+[2017-11-06 18:18:04 +0000] [1232] [INFO] Booting worker with pid: 1232
+[2017-11-06 18:18:04 +0000] [1233] [INFO] Booting worker with pid: 1233
+[2017-11-06 18:18:04 +0000] [1234] [INFO] Booting worker with pid: 1234
+[2017-11-06 18:19:29 +0000] [1053] [INFO] Handling signal: term
+[2017-11-06 18:19:29 +0000] [1214] [INFO] Worker exiting (pid: 1214)
+[2017-11-06 18:19:29 +0000] [1219] [INFO] Worker exiting (pid: 1219)
+[2017-11-06 18:19:29 +0000] [1229] [INFO] Worker exiting (pid: 1229)
+[2017-11-06 18:19:29 +0000] [1226] [INFO] Worker exiting (pid: 1226)
+[2017-11-06 18:19:29 +0000] [1230] [INFO] Worker exiting (pid: 1230)
+[2017-11-06 18:19:29 +0000] [1234] [INFO] Worker exiting (pid: 1234)
+[2017-11-06 18:19:29 +0000] [1232] [INFO] Worker exiting (pid: 1232)
+[2017-11-06 18:19:29 +0000] [1233] [INFO] Worker exiting (pid: 1233)
+[2017-11-06 18:19:30 +0000] [1053] [INFO] Shutting down: Master
+[2017-11-06 18:23:50 +0000] [1839] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 18:23:50 +0000] [1839] [INFO] Listening at: http://0.0.0.0:5000 (1839)
+[2017-11-06 18:23:50 +0000] [1839] [INFO] Using worker: gevent
+[2017-11-06 18:23:50 +0000] [1845] [INFO] Booting worker with pid: 1845
+[2017-11-06 18:23:50 +0000] [1846] [INFO] Booting worker with pid: 1846
+[2017-11-06 18:23:50 +0000] [1847] [INFO] Booting worker with pid: 1847
+[2017-11-06 18:23:50 +0000] [1848] [INFO] Booting worker with pid: 1848
+[2017-11-06 18:23:51 +0000] [1849] [INFO] Booting worker with pid: 1849
+[2017-11-06 18:23:51 +0000] [1850] [INFO] Booting worker with pid: 1850
+[2017-11-06 18:23:51 +0000] [1851] [INFO] Booting worker with pid: 1851
+[2017-11-06 18:23:51 +0000] [1852] [INFO] Booting worker with pid: 1852
+[2017-11-06 18:26:03,950] ERROR in app: Exception on /test/FileUpload [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/app/test.py", line 39, in test_fileupload
+    APP_RELATED = 'static/tmp/' + escape_string(username) + escape_string(get_milliseconds())
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/pymysql/converters.py", line 73, in _escape_unicode
+    return value.translate(_escape_table)
+AttributeError: 'int' object has no attribute 'translate'
+[2017-11-06 18:26:14,614] ERROR in app: Exception on /test/FileUpload [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/app/test.py", line 39, in test_fileupload
+    APP_RELATED = 'static/tmp/' + escape_string(username) + escape_string(get_milliseconds())
+  File "/home/ubuntu/Desktop/ECE1779-A2-worker/ECE1779A2/venv/lib/python3.5/site-packages/pymysql/converters.py", line 73, in _escape_unicode
+    return value.translate(_escape_table)
+AttributeError: 'int' object has no attribute 'translate'
+[2017-11-06 18:26:43 +0000] [1839] [INFO] Handling signal: term
+[2017-11-06 18:26:43 +0000] [1848] [INFO] Worker exiting (pid: 1848)
+[2017-11-06 18:26:43 +0000] [1845] [INFO] Worker exiting (pid: 1845)
+[2017-11-06 18:26:43 +0000] [1849] [INFO] Worker exiting (pid: 1849)
+[2017-11-06 18:26:43 +0000] [1850] [INFO] Worker exiting (pid: 1850)
+[2017-11-06 18:26:43 +0000] [1852] [INFO] Worker exiting (pid: 1852)
+[2017-11-06 18:26:43 +0000] [1851] [INFO] Worker exiting (pid: 1851)
+[2017-11-06 18:26:43 +0000] [1846] [INFO] Worker exiting (pid: 1846)
+[2017-11-06 18:26:43 +0000] [1847] [INFO] Worker exiting (pid: 1847)
+[2017-11-06 18:26:44 +0000] [1839] [INFO] Shutting down: Master
+[2017-11-06 18:26:45 +0000] [2198] [INFO] Starting gunicorn 19.7.1
+[2017-11-06 18:26:45 +0000] [2198] [INFO] Listening at: http://0.0.0.0:5000 (2198)
+[2017-11-06 18:26:45 +0000] [2198] [INFO] Using worker: gevent
+[2017-11-06 18:26:45 +0000] [2203] [INFO] Booting worker with pid: 2203
+[2017-11-06 18:26:46 +0000] [2204] [INFO] Booting worker with pid: 2204
+[2017-11-06 18:26:46 +0000] [2205] [INFO] Booting worker with pid: 2205
+[2017-11-06 18:26:46 +0000] [2206] [INFO] Booting worker with pid: 2206
+[2017-11-06 18:26:46 +0000] [2207] [INFO] Booting worker with pid: 2207
+[2017-11-06 18:26:46 +0000] [2208] [INFO] Booting worker with pid: 2208
+[2017-11-06 18:26:46 +0000] [2209] [INFO] Booting worker with pid: 2209
+[2017-11-06 18:26:46 +0000] [2210] [INFO] Booting worker with pid: 2210
