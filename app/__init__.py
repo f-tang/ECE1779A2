@@ -3,6 +3,7 @@ from functools import wraps
 import pymysql.cursors
 from app.config import db_config
 import boto3
+import time
 from botocore.client import Config
 
 
@@ -56,6 +57,10 @@ def get_s3client():
     s3 = aws_session.client('s3')
 
     return s3
+
+def get_milliseconds():
+    millis = int(round(time.time() * 1000))
+    return millis
 
 
 from app import main

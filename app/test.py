@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, request, g, flash, session
-from app import webapp, get_db, teardown_db, get_s3bucket
+from app import webapp, get_db, teardown_db, get_s3bucket, get_milliseconds
 from pymysql import escape_string
 from passlib.hash import sha256_crypt
 from wand.image import Image
@@ -99,7 +99,7 @@ def test_fileupload():
 
             # save file
             filename = str(file.filename).split('.')[-1]
-            filename = escape_string(str(pID) + '.' + filename)
+            filename = escape_string(str(pID) + '_' + str(get_milliseconds()) + '.' + filename)
             destination = "/".join([target, filename])
             tmp_dest = "/".join([tmp_target, filename])
             file.save(tmp_dest)

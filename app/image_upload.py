@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, request, g, flash, session
-from app import webapp, login_required, get_db,teardown_db, get_s3bucket
+from app import webapp, login_required, get_db,teardown_db, get_s3bucket, get_milliseconds
 from pymysql import escape_string
 from wand.image import Image
 import boto3
@@ -85,7 +85,7 @@ def image_upload():
 
                 # give a new image name accepted by database
                 filename = str(file.filename).split('.')[-1]
-                filename = escape_string(str(pID) + '.' + filename)
+                filename = escape_string(str(pID) + '_' + str(get_milliseconds()) + '.' + filename)
 
                 # save the image file
                 destination = "/".join([target, filename])
