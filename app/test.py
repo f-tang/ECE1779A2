@@ -146,6 +146,6 @@ def test_fileupload():
             if os.path.isdir(tmp_target):
                 shutil.rmtree(tmp_target)
             teardown_db(e)
-        return str(e)
+            return str(e)
 
     return render_template("test-form.html")
